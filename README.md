@@ -1,14 +1,12 @@
-# homebridge-http-lightbulb Plugin
+# homebridge-http-betterdisplay Plugin
 
-[![npm](https://img.shields.io/npm/v/homebridge-http-lightbulb?style=for-the-badge)](https://www.npmjs.com/package/homebridge-http-lightbulb)
-[![npm](https://img.shields.io/npm/dt/homebridge-http-lightbulb?style=for-the-badge)](https://www.npmjs.com/package/homebridge-http-lightbulb)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Supereg/homebridge-http-lightbulb/Node-CI?style=for-the-badge)](https://github.com/Supereg/homebridge-http-lightbulb/actions?query=workflow%3A%22Node-CI%22)
-[![GitHub issues](https://img.shields.io/github/issues/Supereg/homebridge-http-lightbulb?style=for-the-badge)](https://github.com/Supereg/homebridge-http-lightbulb/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/Supereg/homebridge-http-lightbulb?style=for-the-badge)](https://github.com/Supereg/homebridge-http-lightbulb/pulls)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/XYSheldon/homebridge-http-betterdisplay/Node-CI?style=for-the-badge)](https://github.com/XYSheldon/homebridge-http-betterdisplay/actions?query=workflow%3A%22Node-CI%22)
+[![GitHub issues](https://img.shields.io/github/issues/XYSheldon/homebridge-http-betterdisplay?style=for-the-badge)](https://github.com/XYSheldon/homebridge-http-betterdisplay/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/XYSheldon/homebridge-http-betterdisplay?style=for-the-badge)](https://github.com/XYSheldon/homebridge-http-betterdisplay/pulls)
 
 
-`homebridge-http-lightbulb` is a [Homebridge](https://github.com/nfarina/homebridge) plugin with which you can configure 
-HomeKit light bulbs which forward any requests to a defined http server. This comes in handy when you already have home 
+`homebridge-http-betterdisplay` is a [Homebridge](https://github.com/nfarina/homebridge) plugin with which you can configure 
+HomeKit light bulbs which forward any requests to a BetterDisplay http server. This comes in handy when you already have home 
 automated equipment which can be controlled via http requests. Or you have built your own equipment, for example some sort 
 of lightning controlled with an wifi enabled Arduino board which than can be integrated via this plugin into Homebridge.
 
@@ -16,20 +14,20 @@ of lightning controlled with an wifi enabled Arduino board which than can be int
 
 First of all you need to have [Homebridge](https://github.com/nfarina/homebridge) installed. Refer to the repo for 
 instructions.  
-Then run the following command to install `homebridge-http-lightbulb`
+Then run the following command to install `homebridge-http-betterdisplay`
 
 ```
-sudo npm install -g homebridge-http-lightbulb
+sudo npm install -g XYSheldon/homebridge-http-betterdisplay
 ```
 
 ## Updating the light bulb state in HomeKit
 
 All characteristic from the _'lightbulb'_ service have the permission to `notify` the HomeKit controller of state 
-changes. `homebridge-http-lightbulb` supports two concepts to send state changes to HomeKit.
+changes. `homebridge-http-betterdisplay` supports two concepts to send state changes to HomeKit.
 
 ### The 'pull' way:
 
-The 'pull' way is probably the easiest to set up and supported in every scenario. `homebridge-http-lightbulb` requests the 
+The 'pull' way is probably the easiest to set up and supported in every scenario. `homebridge-http-betterdisplay` requests the 
 state of the light in an specified interval (pulling) and sends the value to HomeKit. 
 However the pull way is currently only supported for the _'On'_ characteristic!  
 Look for `pullInterval` in the list of configuration options if you want to configure it.
@@ -458,13 +456,13 @@ Note that every url is simply a string and are only examples. You could also def
 
 ## Notification Server
 
-`homebridge-http-lightbulb` can be used together with 
+`homebridge-http-betterdisplay` can be used together with 
 [homebridge-http-notification-server](https://github.com/Supereg/homebridge-http-notification-server) in order to receive
 updates when the state changes at your external program. For details on how to implement those updates and how to 
 install and configure `homebridge-http-notification-server`, please refer to the 
 [README](https://github.com/Supereg/homebridge-http-notification-server) of the repository first.
 
-Down here is an example on how to configure `homebridge-http-lightbulb` to work with your implementation of the 
+Down here is an example on how to configure `homebridge-http-betterdisplay` to work with your implementation of the 
 `homebridge-http-notification-server`.
 
 ```json
