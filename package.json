@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-http-lightbulb",
-  "version": "1.2.4",
-  "description": "Http lightbulb for Homebridge",
+  "name": "homebridge-http-betterdisplay",
+  "version": "1.2.5",
+  "description": "BetterDisplay HTTP Integration for Homebridge",
   "license": "ISC",
   "keywords": [
     "homebridge-plugin"
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/Supereg/homebridge-http-lightbulb.git"
+    "url": "git@github.com/XYSheldon/homebridge-http-betterdisplay.git"
   },
   "bugs": {
-    "url": "https://github.com/Supereg/homebridge-http-lightbulb/issues"
+    "url": "https://github.com/XYSheldon/homebridge-http-betterdisplay/issues"
   },
   "engines": {
     "node": ">=10.17.0",
